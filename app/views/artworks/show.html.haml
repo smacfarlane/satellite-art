@@ -1,0 +1,22 @@
+%p#notice= notice
+%p
+  %strong Style:
+  = @artwork.style_id
+%p
+  %strong Image:
+  = @artwork.image_id
+%p
+  %strong Model:
+  = @artwork.model
+%p
+  %strong Size:
+  = @artwork.size
+%p
+  %strong Smoothness:
+  = @artwork.smoothness
+%p
+  %strong Num iters:
+  = @artwork.num_iters
+= link_to 'Edit', edit_artwork_path(@artwork)
+|
+= link_to 'Back', artworks_path
