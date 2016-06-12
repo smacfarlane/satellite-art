@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  style_id: MyString
+  image_id: MyString
+  model: MyString
+  size: 1
+  smoothness: MyString
+  num_iters: 1
+
+two:
+  style_id: MyString
+  image_id: MyString
+  model: MyString
+  size: 1
+  smoothness: MyString
+  num_iters: 1
