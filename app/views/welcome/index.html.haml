@@ -1,5 +1,11 @@
-%h1 Weclome to Satellite Art
-
-= image_tag 'http://feeder.gina.alaska.edu/media/W1siZiIsIjIwMTIvMTEvMjIvMDJfMjlfMTJfNzc5X25wcC4xMjExMy4yMjAzX3RydWVjb2xvcl9hYV8xNTAwLmpwZyJdLFsicCIsInRodW1iIiwiMjUweDI1MCMiXV0'
-
-= link_to "Create New Satellite Art", new_artwork_path
+.row
+  .col-sm-4.col-sm-offset-4.text-center
+    .panel.panel-default
+      .panel-heading
+        %h3 Welcome to Satellite Art
+      .panel-body
+        = image_tag 'http://feeder.gina.alaska.edu/media/W1siZiIsIjIwMTIvMTEvMjIvMDJfMjlfMTJfNzc5X25wcC4xMjExMy4yMjAzX3RydWVjb2xvcl9hYV8xNTAwLmpwZyJdLFsicCIsInRodW1iIiwiMjUweDI1MCMiXV0'
+      .panel-footer
+        - if can? :create, Artwork
+          = link_to artworks_path, class: 'btn btn-primary' do
+            Browse Satellite Art
