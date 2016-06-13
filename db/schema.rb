@@ -11,20 +11,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160612194755) do
+ActiveRecord::Schema.define(version: 20160612203428) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "api_keys", force: :cascade do |t|
+    t.string   "token",                     null: false
+    t.boolean  "enabled",    default: true
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+  end
+
   create_table "artworks", force: :cascade do |t|
     t.string   "style_id"
     t.string   "image_id"
-    t.string   "model",      default: "vgg", null: false
-    t.integer  "size",       default: 500,   null: false
-    t.string   "smoothness", default: "0",   null: false
-    t.integer  "num_iters",  default: 500,   null: false
-    t.datetime "created_at",                 null: false
-    t.datetime "updated_at",                 null: false
+    t.string   "model",      default: "vgg",     null: false
+    t.integer  "size",       default: 500,       null: false
+    t.string   "smoothness", default: "0",       null: false
+    t.integer  "num_iters",  default: 500,       null: false
+    t.string   "status",     default: "pending", null: false
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
   end
 
 end

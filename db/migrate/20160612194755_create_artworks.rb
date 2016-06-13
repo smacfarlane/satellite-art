@@ -7,6 +7,7 @@ class CreateArtworks < ActiveRecord::Migration[5.0]
       t.integer :size, default: 500, null: false
       t.string :smoothness, default: 0, null: false
       t.integer :num_iters, default: 500, null: false
+      t.string :status, default: 'pending', null: false
 
       t.timestamps
     end
