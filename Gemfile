@@ -20,6 +20,10 @@ gem 'sinatra', github: 'sinatra'
 gem 'refile', require: "refile/rails", github: 'pgericson/refile', branch: 'stupid-hack-sinatra-version'
 gem 'refile-s3'
 gem 'simple_form'
+gem 'devise', github: 'plataformatec/devise'
+gem 'omniauth'
+gem 'omniauth-openid'
+gem 'cancancan'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-bootstrap'
