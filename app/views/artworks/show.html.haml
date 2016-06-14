@@ -1,8 +1,21 @@
-%p#notice= notice
-%p
-  %strong Style:
-  = image_tag(attachment_url(@artwork, :style))
-%p
-  %strong Image:
-  - if @artwork.image_id?
-    = image_tag(attachment_url(@artwork, :image))
+.container-fluid
+  .row-fluid.text-center.clearfix
+    - unless @artwork.image.nil?
+      .artwork.col-xs-12.col-md-4
+        .panel.panel-default
+          .panel-heading
+            Result
+          .panel-body
+            = image_tag attachment_url(@artwork, :image), class: 'art-preview'
+    .artwork.col-xs-12.col-md-4
+      .panel.panel-default
+        .panel-heading
+          Source Image
+        .panel-body
+          = image_tag 'starry-alaska.jpg', class: 'art-preview'
+    .artwork.col-xs-12.col-md-4
+      .panel.panel-default
+        .panel-heading
+          Style Image
+        .panel-body
+          = image_tag attachment_url(@artwork, :style), class: 'art-preview'

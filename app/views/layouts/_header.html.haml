@@ -8,8 +8,11 @@
       %span.icon-bar
       = link_to root_url, class: 'navbar-brand' do
         Satellite Art
-    #navbar.collapse.navbar-collapse
-      %ul.nav.navbar-nav.navbar-right
+    #navbar.collapse.navbar-collapse.navbar-right
+      - if signed_in? && current_user.approved?
+        %ul.nav.navbar-nav
+          %li= link_to "Create Artwork", new_artwork_path
+      %ul.nav.navbar-nav
         - if signed_in?
           %li= link_to "Sign Out", destroy_user_session_url
         - else
