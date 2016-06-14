@@ -1,6 +1,8 @@
 class Api::V1::ArtworksController < ApiController
   before_filter :fetch_artwork, only: [:show, :update]
 
+  authorize_resource
+
   def index
     @artworks = Artwork.all
   end
