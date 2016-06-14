@@ -1,6 +1,7 @@
 class ApiKeysController < ApplicationController
   before_action :set_api_key, only: [:show, :edit, :update, :destroy]
 
+  authorize_resource
   # GET /api_keys
   # GET /api_keys.json
   def index
