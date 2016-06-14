@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160614013404) do
+ActiveRecord::Schema.define(version: 20160614231857) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,13 +26,13 @@ ActiveRecord::Schema.define(version: 20160614013404) do
   create_table "artworks", force: :cascade do |t|
     t.string   "style_id"
     t.string   "image_id"
-    t.string   "model",      default: "vgg",     null: false
-    t.integer  "size",       default: 500,       null: false
-    t.string   "smoothness", default: "0",       null: false
-    t.integer  "num_iters",  default: 500,       null: false
-    t.string   "status",     default: "pending", null: false
-    t.datetime "created_at",                     null: false
-    t.datetime "updated_at",                     null: false
+    t.string   "model",      default: "inception", null: false
+    t.integer  "size",       default: 500,         null: false
+    t.string   "smoothness", default: "0",         null: false
+    t.integer  "num_iters",  default: 500,         null: false
+    t.string   "status",     default: "pending",   null: false
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
     t.integer  "source_id"
     t.index ["source_id"], name: "index_artworks_on_source_id", using: :btree
   end
