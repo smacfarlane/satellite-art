@@ -1,5 +1,5 @@
 class Source < ApplicationRecord
   attachment :image
 
-  validates :name, :presence
+  validates :name, presence: true
 end
