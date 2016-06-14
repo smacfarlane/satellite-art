@@ -12,7 +12,7 @@
         .panel-heading
           Source Image
         .panel-body
-          = image_tag 'starry-alaska.jpg', class: 'art-preview'
+          = image_tag attachment_url(@artwork.source, :image), class: 'art-preview'
     .artwork.col-xs-12.col-md-4
       .panel.panel-default
         .panel-heading

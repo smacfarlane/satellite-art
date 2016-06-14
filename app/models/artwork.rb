@@ -9,5 +9,7 @@ class Artwork < ApplicationRecord
   validates :size, numericality: { greater_than_or_equal_to: 100, less_than_or_equal_to: 512 }
   validates :num_iters, numericality: { greater_than_or_equal_to: 100, less_than_or_equal_to: 1000 }
   validates :status, inclusion: { in: STATUS }
-
+  validates :source_id, presence: true
+  
+  belongs_to :source
 end

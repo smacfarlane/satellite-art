@@ -1,7 +1,7 @@
 = simple_form_for(@source) do |f|
   = f.error_notification
   .form-inputs
-    = f.input :style, as: :file
+    = f.input :image, as: :file
     = f.input :name
   .form-actions
     = f.button :submit, class: 'btn btn-primary'
