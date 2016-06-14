@@ -16,4 +16,4 @@
         - if signed_in?
           %li= link_to "Sign Out", destroy_user_session_url
         - else
-          %li= link_to "Sign In", new_user_session_url
+          %li= link_to "Sign In", user_gina_id_omniauth_authorize_path
