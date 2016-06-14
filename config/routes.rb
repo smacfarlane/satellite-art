@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :sources
   devise_for :users, controllers: { omniauth_callbacks: "users/omniauth_callbacks" }
   resources :api_keys, only: [:create, :index, :destroy]
   resources :artworks

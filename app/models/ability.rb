@@ -13,6 +13,7 @@ class Ability
 
     can :manage, ApiKey if user.approved?
     can :manage, Artwork if user.approved?
+    can :manage, Source if user.approved?
     can :read, Artwork
   end
 
