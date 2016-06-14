@@ -24,6 +24,7 @@ gem 'devise', github: 'plataformatec/devise'
 gem 'omniauth'
 gem 'omniauth-openid'
 gem 'cancancan'
+gem 'rails_12factor', group: :production
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-bootstrap'

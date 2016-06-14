@@ -5,7 +5,7 @@
 #   gem 'sqlite3'
 #
 default: &default
-  url: <%= ENV['DATABSE_URL'] %>
+  url: <%= ENV['DATABASE_URL'] %>
   adapter: postgresql
   pool: 5
   timeout: 5000
@@ -20,8 +20,4 @@ development:
 test:
   <<: *default
   database: satart_test
-
-production:
-  <<: *default
-  database: satart_prod
   
