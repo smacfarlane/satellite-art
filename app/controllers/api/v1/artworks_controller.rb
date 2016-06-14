@@ -1,5 +1,7 @@
-class Api::V1::ArtworksController < ApplicationController
+class Api::V1::ArtworksController < ApiController
   before_filter :fetch_artwork, only: [:show, :update]
+
+  authorize_resource
 
   def index
     @artworks = Artwork.all
@@ -9,7 +11,7 @@ class Api::V1::ArtworksController < ApplicationController
   end
 
   def update
-    if @artwork.update_attributes(artwork_params)
+    if @artwork.update_attributes({image: params[:image], status: 'finished'})
       head 200, content_type: 'application/json'
     else
       head 503, content_type: 'application/json'
@@ -20,4 +22,5 @@ class Api::V1::ArtworksController < ApplicationController
   def fetch_artwork
     @artwork = Artwork.find(params[:id])
   end
+
 end

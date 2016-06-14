@@ -1,6 +1,6 @@
 class Artwork < ApplicationRecord
   MODEL_TYPES = %w(vgg inception).freeze
-  STATUS = %w(pending error finish).freeze
+  STATUS = %w(pending error finished).freeze
 
   attachment :style
   attachment :image
