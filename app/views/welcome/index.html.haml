@@ -6,6 +6,5 @@
       .panel-body
         = image_tag 'starry-alaska.jpg'
       .panel-footer
-        - if can? :create, Artwork
-          = link_to artworks_path, class: 'btn btn-primary btn-block' do
-            Browse Satellite Art
+        = link_to artworks_path, class: 'btn btn-primary btn-block' do
+          Browse Satellite Art
