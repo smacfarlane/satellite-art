@@ -11,7 +11,7 @@ class Api::V1::ArtworksController < ApiController
   end
 
   def update
-    if @artwork.update_attributes(artwork_params.merge(status: 'finished'))
+    if @artwork.update_attributes({image: params[:image], status: 'finished'})
       head 200, content_type: 'application/json'
     else
       head 503, content_type: 'application/json'
@@ -23,7 +23,4 @@ class Api::V1::ArtworksController < ApiController
     @artwork = Artwork.find(params[:id])
   end
 
-  def artwork_params
-    params.permit(:image)
-  end
 end

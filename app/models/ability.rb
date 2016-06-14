@@ -16,8 +16,11 @@ class Ability
     can :read, Artwork
   end
 
-  def api_abilities(key)
+  def api_abilities(token)
+    key = ApiKey.find_by(token: token)
     key ||= ApiKey.new
+
+    Rails.logger.info("#{token}, #{ApiKey.inspect}")
 
     can :manage, Artwork unless key.new_record?
   end
