@@ -4,7 +4,7 @@
       .artwork.col-xs-12.col-sm-6.col-lg-4
         .panel.panel-default
           .panel-body
-            = image_tag attachment_url(artwork, :image), class: 'art-preview'
+            = image_tag attachment_url(artwork, :image, :fill, 300, 300, format: "jpg"), class: 'art-preview'
           .panel-footer
             = link_to artwork, class: 'btn btn-primary btn-block' do
               View

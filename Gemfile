@@ -18,6 +18,7 @@ gem 'dotenv-rails'
 # TODO: Remove later. Stupid hack to work around version mismatches
 gem 'sinatra', github: 'sinatra'
 gem 'refile', require: "refile/rails", github: 'pgericson/refile', branch: 'stupid-hack-sinatra-version'
+gem 'refile-mini_magick'
 gem 'refile-s3'
 gem 'simple_form'
 gem 'devise', github: 'plataformatec/devise'

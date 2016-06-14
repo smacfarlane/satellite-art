@@ -6,16 +6,22 @@
           .panel-heading
             Result
           .panel-body
-            = image_tag attachment_url(@artwork, :image), class: 'art-preview'
+            = image_tag attachment_url(@artwork, :image, :fill, 300, 300, format: "jpg"), class: 'art-preview'
+          .panel-footer
+            = link_to "Full Size", attachment_url(@artwork, :image, format: "jpg"), class: 'btn btn-default btn-block'
     .artwork.col-xs-12.col-md-4
       .panel.panel-default
         .panel-heading
           Source Image
         .panel-body
-          = image_tag attachment_url(@artwork.source, :image), class: 'art-preview'
+          = image_tag attachment_url(@artwork.source, :image, :fill, 300, 300, format: "jpg"), class: 'art-preview'
+        .panel-footer
+          = link_to "Full Size", attachment_url(@artwork, :image, format: "jpg"), class: 'btn btn-default btn-block'
     .artwork.col-xs-12.col-md-4
       .panel.panel-default
         .panel-heading
           Style Image
         .panel-body
-          = image_tag attachment_url(@artwork, :style), class: 'art-preview'
+          = image_tag attachment_url(@artwork, :style, :fill, 300, 300, format: "jpg"), class: 'art-preview'
+        .panel-footer
+          = link_to "Full Size", attachment_url(@artwork, :image, format: "jpg"), class: 'btn btn-default btn-block'
