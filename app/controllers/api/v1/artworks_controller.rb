@@ -1,4 +1,4 @@
-class Api::V1::ArtworksController < ApplicationController
+class Api::V1::ArtworksController < ApiController
   before_filter :fetch_artwork, only: [:show, :update]
 
   def index
