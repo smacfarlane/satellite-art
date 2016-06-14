@@ -1,12 +1,25 @@
-= simple_form_for(artwork) do |f|
-  - if artwork.errors.any?
-    #error_explanation
-      %h2
-        = pluralize(artwork.errors.count, "error")
-        prohibited this artwork from being saved:
-      %ul
-        - artwork.errors.full_messages.each do |message|
-          %li= message
-  = f.input :style, as: :file
-  .actions
-    = f.submit
+.container
+  .row
+    = simple_form_for(artwork) do |f|
+      -# - @sources.each do |source|
+      -#   .artwork.col-xs-12
+      -#     .panel.panel-default
+      -#       .panel-heading
+      -#         Source Image
+      -#       .panel-body
+      -#         = image_tag attachment_url(source, :image), class: 'art-preview'
+      -#       .panel-footing
+      - if artwork.errors.any?
+        #error_explanation
+          %h2
+            = pluralize(artwork.errors.count, "error")
+            prohibited this artwork from being saved:
+          %ul
+            - artwork.errors.full_messages.each do |message|
+              %li= message
+
+      = f.association :source, as: :radio_buttons
+      = f.input :style, as: :file
+
+      .actions
+        = f.submit#, class: 'btn btn-primary'
