@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
   protected
 
   def special_controller
-    devise_controller?
+    devise_controller? || is_a?(HighVoltage::PagesController)
   end
 
   def handle_permission_error

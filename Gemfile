@@ -26,6 +26,7 @@ gem 'omniauth'
 gem 'omniauth-openid'
 gem 'cancancan'
 gem 'rails_12factor', group: :production
+gem 'high_voltage'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-bootstrap'
